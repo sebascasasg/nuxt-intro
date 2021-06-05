@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Nav />
     <div v-if="product" class="container py-5">
       <div class="hero-container">
         <img
@@ -49,8 +48,8 @@
         </p>
       </div>
     </div>
-    <div v-else class="container padding">
-      Page not FOUUUUND
+    <div v-else class="container padding not-found">
+      <PageNotFound />
     </div>
   </div>
 </template>
@@ -136,5 +135,10 @@ button {
 
 .padding {
   padding: 10rem 0;
+}
+
+.not-found {
+  display: flex;
+  justify-content: center;
 }
 </style>

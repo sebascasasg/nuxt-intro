@@ -2,14 +2,13 @@
   <div>
     <Nav />
     <div class="container">
-      <Hero />
       <LargeCardDisplay
-        v-for="cardInfo in largeCardInfo"
+        v-for="cardInfo in largeCardInfo.slice(0, 1)"
         :key="cardInfo.id"
         :cardSection="cardInfo"
       />
       <SmallCardDisplay
-        v-for="cardInfo in smallCardInfo"
+        v-for="cardInfo in smallCardSections"
         :key="cardInfo.id"
         :cardSection="cardInfo"
       />
@@ -23,10 +22,10 @@ export default {
   data() {
     return {
       largeCardInfo: largeCardSections,
-      smallCardInfo: smallCardSections
+      smallCardSections: smallCardSections
     };
   }
 };
 </script>
 
-<style></style>
+<style scoped></style>

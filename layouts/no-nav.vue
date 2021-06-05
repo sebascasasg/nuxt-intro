@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <Nav />
+  <div class="container">
     <Nuxt />
   </div>
 </template>
@@ -23,6 +22,10 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.container {
+  padding: 5rem 0;
 }
 
 .button--green {
